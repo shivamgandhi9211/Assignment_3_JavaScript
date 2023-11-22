@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Maker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Pizza Maker</h1>
+        <p id="studentInfo"></p>
+    </header>
+    <img src="images/bg.jpg" alt="Background Image" id="backgroundImg">
+
+    <section>
+        <form id="pizzaForm" onsubmit="event.preventDefault(); validateForm()">
+            <!-- Your pizza order form goes here -->
+            <label for="pizzaSize">
+                <span>Pizza Size:</span>
+                <select id="pizzaSize" name="pizzaSize" required>
+                    <option value="" disabled selected>Select Size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </label>
+
+            <label for="pizzaFlavour">
+                <span>Pizza Flavour:</span>
+                <select id="pizzaFlavour" name="pizzaFlavour" required>
+                    <option value="" disabled selected>Select Flavour</option>
+                    <option value="Super Cheese">Super Cheese</option>
+                    <option value="Fajita">Fajita</option>
+                    <option value="Garlic Mayo">Garlic Mayo Pizza</option>
+                    <option value="Creamy Tikka">Creamy Tikka</option>
+                    <option value="BBQ Chicken">BBQ Chicken</option>
+                </select>
+            </label>
+            
+            <label for="toppings">
+                <span>Toppings:</span>
+                <input type="text" id="toppings" name="toppings" placeholder="Enter toppings" required>
+            </label>
+            
+            <label for="crustType">
+                <span>Crust Type:</span>
+                <input type="text" id="crustType" name="crustType" placeholder="Enter crust type" required>
+            </label>
+            
+
+            <button type="submit">Order</button>
+        </form>
+
+        <div id="pizzaDescription"></div>
+    </section>
+
+</body>
+
+</html>
